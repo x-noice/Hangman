@@ -25,7 +25,7 @@
 ![2](https://github.com/x-noice/Hangman/assets/150224928/015dda1a-30ed-425a-bd87-1d50d36116c9)
 ![3](https://github.com/x-noice/Hangman/assets/150224928/38922f9a-4ce7-43c0-9542-addb852f67ad)
 
-• It is a hangman game based on marvel superheroes.
+• It is a hangman game based on marvel superheroes.<br>
 • You can edit the list and have different words to guess.
 
 ## Download The Project
