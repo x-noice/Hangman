@@ -1,7 +1,7 @@
 <img src='https://github.com/x-noice/Hangman/assets/150224928/eb30ae96-ba4c-4baf-bb44-98ce765c9953' width='85px'>
 <h3>Hangman</h3>
 <p>
-  An awesome Tic-Tac-Toe python project with built-in AI.
+  An awesome Hangman python project.
   <br/>
   <a href="https://replit.com/@raghavsrvtryan/Hangman#main.py">View Demo</a>
   .
