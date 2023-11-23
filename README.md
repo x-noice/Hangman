@@ -35,6 +35,6 @@ Download the project file by following the steps given below ➡<br>
 ![4](https://github.com/x-noice/Hangman/assets/150224928/5133bddc-3351-4438-ac18-a12b14e2130b)
 
 ## License
-Distributed under the MIT License. See [LICENSE](https://github.com/x-noice/Hangman/blob/main/LICENSE.md) for more information.
+Distributed under the MIT License. See [LICENSE](https://github.com/x-noice/Hangman/blob/main/LICENSE) for more information.
 ## Author
 * **x-noice** - *Computer Science Student* - [x-noice](https://github.com/x-noice/)
