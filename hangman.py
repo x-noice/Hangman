@@ -1,7 +1,6 @@
-# Import the random module to generate a random number
 import random
 marvel_superheroes = ["IRON MAN","THOR","CAPTAIN AMERICA","HULK","SPIDER MAN","BLACK WIDOW","HAWKEYE","SCARLET WITCH","DOCTOR STRANGE","BLACK PANTHER"]
-# Define ASCII art for the win and lose messages, hangman stages, and game credits
+# ASCII art for the win and lose messages, hangman stages, game credits and hangman
 won = '''
  __     ______  _    _  __          ______  _   _ _ 
  \\ \\   / / __ \\| |  | | \\ \\        / / __ \\| \\ | | |
@@ -113,7 +112,6 @@ credit ='''
                                                                                                                                                    
 https://github.com/x-noice
 '''
-# Define ASCII art for the hangman game title
 hangman = '''
   _    _                                         
  | |  | |                                        
@@ -126,16 +124,39 @@ hangman = '''
 '''
 # Define a function to explain how to play the hangman game
 def how_to_play():
+    """
+    Display instructions on how to play the Hangman game.
+    """
     print(hangman,'\n',credit)
     print('-'*55)
     print('• Guess the word by guessing one letter at a time\n• You have only 7 chances to guess the letter.')
     print('-'*55)
+def print_hangman_state():
+    """
+    Print the current state of the hangman based on the remaining chances.
+    """
+    if(chances==6):
+        print(hangman_1)
+        print('Chances left:',chances)
+    elif(chances==5):
+        print(hangman_2)
+        print('Chances left:',chances)
+    elif(chances==4):
+        print(hangman_3)
+        print('Chances left:',chances)
+    elif(chances==3):
+        print(hangman_4)
+        print('Chances left:',chances)
+    elif(chances==2):
+        print(hangman_5)
+        print('Chances left:',chances)
+    elif(chances==1):
+        print(hangman_6)
+        print('Chances left:',chances)
 how_to_play()
-randInt = random.randint(0,9)
+randInt = random.randint(0,len(marvel_superheroes)-1)
 # Get the superhero name as a list of characters and split it into individual characters
-hero_name = []
-for i in marvel_superheroes[randInt]:
-    hero_name.append(i)
+hero_name = list(marvel_superheroes[randInt])
 chances = 7
 chr_entered=[]
 # Initialize a list to store the entered superhero name with underscores for unrevealed letters
@@ -165,24 +186,7 @@ while(chances!=0 and hero_name_entered!=hero_name):
             # If the guessed character is not in the superhero name, decrement the chances and display the corresponding hangman stage
             elif(guessed_chr not in hero_name):
                 chances-=1
-                if(chances==6):
-                    print(hangman_1)
-                    print('Chances left:',chances)
-                elif(chances==5):
-                    print(hangman_2)
-                    print('Chances left:',chances)
-                elif(chances==4):
-                    print(hangman_3)
-                    print('Chances left:',chances)
-                elif(chances==3):
-                    print(hangman_4)
-                    print('Chances left:',chances)
-                elif(chances==2):
-                    print(hangman_5)
-                    print('Chances left:',chances)
-                elif(chances==1):
-                    print(hangman_6)
-                    print('Chances left:',chances)
+                print_hangman_state()
         elif(guessed_chr in chr_entered):
             print('⚠ You have already entered that letter. Please try again with a different letter.')
     else:
